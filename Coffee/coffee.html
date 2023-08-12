@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>  CAFE  </title>
+
+<style>
+
+body {
+	margin: 0;
+	position: relative;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+}
+
+img {
+	width: 100%;
+	top: 0;
+	position: fixed;
+	z-index: -1;
+}
+
+.body {
+	width: 40%;
+	height: 600px;
+	display: block;
+	margin: 20px auto;
+	color: white;
+	text-align: center;
+	background: rgba(0,0,0,.8);
+	border-radius: 2%;
+}
+
+.input {
+	width: 80%;
+	height: 500px;
+	display: block;
+	margin: 20px auto;
+	color: white;
+	text-align: center;
+}
+
+.x {
+	height: 20px;
+	width: 20px;
+}
+
+.text {
+	width: 400px;
+	height: 40px;
+	background: transparent;
+	color: white;
+	border: 2px solid white;
+	border-radius: 5px;
+	pointer-events: none;
+}
+
+button {
+	width: 100px;
+	height: 50px;
+	background: transparent;
+	color: white;
+	border: 2px solid white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.compute, .compute2 {
+	width: 100px;
+	height: 40px;
+	background: transparent;
+	color: white;
+	border: 2px solid white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.compute2 {
+	opacity: 0.3;
+	pointer-events: none;
+}
+
+.compute:hover, .compute2:hover {
+	background: white;
+	color: black;
+}
+
+label {
+	font-size: 20px;
+}
+
+
+
+</style>
+
+</head>
+
+<!==============================================================================>
+
+<body>
+<form id="myform">
+	
+	<img src="coffee.jpg">
+	
+	<br> 
+	
+	<div class="body">
+	<br>
+		<p style="font-size: 30px"> How Would you like your Coffee? </p>
+		
+		<div class="input">
+		
+			<br> <br>
+		
+			<input type="checkbox" class="x" id="CREAM" name="C"> <label for="C">With CREAM</label>
+			
+			<br> <br>
+			
+			<input type="checkbox" class="x" id="SUGAR" name="S"> <label for="S">With SUGAR</label>
+			
+			<br> <br> <br> <br>
+			
+			<input type="button" class="compute" value="SEND ORDER" onclick="compute()">
+			
+			<br> <br> <br> <br>
+			
+			<input type="text" class="text" id="TEXT" readonly>
+			
+			<br> <br> <br> <br> <br>
+			
+			<input type="reset" value="SUBMIT" onclick="sub()" id="SUB" class="compute2" disabled>
+			
+		</div>
+	
+	</div>
+	
+</form>
+
+<script>
+
+var CREAM = document.getElementById("CREAM");
+var SUGAR = document.getElementById("SUGAR");
+var TEXTC = "";
+var TEXTS = "";
+
+function compute() {
+
+if (CREAM.checked == true){
+    TEXTC  = "CREAM";
+	TEXTS = "";
+  }
+  
+if (SUGAR.checked == true){
+    TEXTS  = "SUGAR";
+	TEXTC = "";
+  }
+  
+if ((CREAM.checked == false) && (SUGAR.checked == false))  {
+	TEXTC = "NO Cream or Sugar";
+	TEXTS = "";
+}
+
+if ((CREAM.checked == true) && (SUGAR.checked == true))  {
+	TEXTC = "CREAM and SUGAR";
+	TEXTS = "";
+}
+  
+	document.getElementById("TEXT").value = "You ordered a coffee with: " + TEXTC + " " + TEXTS;
+	document.getElementById("SUB").disabled = false;
+	document.getElementById("SUB").style.opacity = 1;
+	document.getElementById("SUB").style.pointerEvents = "auto";
+}
+
+function sub() {
+	
+	document.getElementById("SUB").disabled = true;
+	document.getElementById("SUB").style.opacity = 0.3;
+	document.getElementById("SUB").style.pointerEvents = "none";
+	alert("Your order has been processed, please wait!");
+	document.getElementById("myform").reset();
+}
+
+</script>
+
+</body>
+
+</html>

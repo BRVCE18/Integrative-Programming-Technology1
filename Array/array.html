@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>  ARRAY  </title>
+
+<style>
+
+
+
+body {
+	margin: 0;
+	position: relative;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+}
+
+img {
+	width: 100%;
+	top: 0;
+	position: fixed;
+	z-index: -1;
+}
+
+.body {
+	width: 60%;
+	height: 650px;
+	display: block;
+	margin: 20px auto;
+	color: white;
+	text-align: center;
+	background: rgba(0,0,0,.8);
+	border-radius: 2%;
+}
+
+.input {
+	width: 100%;
+	height: 500px;
+	display: block;
+	margin: 20px auto;
+	color: white;
+	text-align: center;
+}
+
+.text {
+	width: 600px;
+	height: 35px;
+	background: transparent;
+	color: white;
+	border: 2px solid white;
+	border-radius: 5px;
+	pointer-events: none;
+	padding-left: 10px;
+}
+
+button {
+	width: 100px;
+	height: 50px;
+	background: transparent;
+	color: white;
+	border: 2px solid white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.compute {
+	width: 100px;
+	height: 40px;
+	background: transparent;
+	color: white;
+	border: 2px solid white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.compute:hover, .compute2:hover {
+	background: white;
+	color: black;
+}
+
+label {
+	font-size: 20px;
+}
+
+.array {
+	font-size: 15px;
+}
+
+</style>
+
+</head>
+
+<!==============================================================================>
+
+<body>
+<form id="myform">
+	
+	<img src="array.jpg">
+	
+	<br> 
+	
+	<div class="body">
+	<br>
+		<p style="font-size: 30px"> ARRAY </p>
+		
+		<div class="input">
+		
+			<span class="array"> Malabon - Antipolo - Marikina - Pasay - Quezon City - Caloocan City - San Juan
+
+			<br> <br> [ DAVAO, SAN MATEO, MANILA ] 
+			
+			</span>
+			
+			<br> <br> <br>
+		
+			<input type="button" class="compute" value="SHOW" onclick="show()">
+			
+			<br> <br> <br>
+		
+			<label> Join _ &nbsp &nbsp </label> <input type="text" class="text" id="iJOIN">
+			
+			<br> <br>
+			
+			<label> Reverse </label> <input type="text" class="text" id="iREVERSE">
+			
+			<br> <br>
+		
+			<label> Sort &nbsp &nbsp &nbsp </label> <input type="text" class="text" id="iSORT">
+			
+			<br> <br>
+			
+			<label> Concat &nbsp </label> <input type="text" class="text" id="iCONCAT">
+			
+			<br> <br>
+		
+			<label> Slice &nbsp &nbsp &nbsp </label> <input type="text" class="text" id="iSLICE">
+			
+			<br> <br>
+			
+			<label> ToString </label> <input type="text" class="text" id="iSTRING">
+			
+			<br> <br> <br> <br>
+			
+		</div>
+	
+	</div>
+	
+</form>
+
+<script>
+
+	var PLACES1 = ["Malabon", "Antipolo", "Marikina", "Pasay", "Quezon City", "Caloocan City", "San Juan"];
+	var PLACES2 = ["Malabon", "Antipolo", "Marikina", "Pasay", "Quezon City", "Caloocan City", "San Juan"];
+	var PLACES3 = ["Malabon", "Antipolo", "Marikina", "Pasay", "Quezon City", "Caloocan City", "San Juan"];
+	var PLACES4 = ["Malabon", "Antipolo", "Marikina", "Pasay", "Quezon City", "Caloocan City", "San Juan"];
+	var PLACES5 = ["Malabon", "Antipolo", "Marikina", "Pasay", "Quezon City", "Caloocan City", "San Juan"];
+	var PLACES6 = ["Malabon", "Antipolo", "Marikina", "Pasay", "Quezon City", "Caloocan City", "San Juan"];
+	
+	//yung function show() na to is yung button hehe
+	
+function show() { 
+
+		//yung iJOIN, iREVERSE eme yan yung IDs sa bawat text box :>
+	document.getElementById("iJOIN").value = PLACES1.join("_");	
+	document.getElementById("iREVERSE").value = PLACES2.reverse();
+	document.getElementById("iSORT").value = PLACES3.sort();
+	document.getElementById("iCONCAT").value = PLACES4.concat("DAVAO", "SAN MATEO", "MANILA");
+	document.getElementById("iSLICE").value = PLACES5.slice(2,5);
+	document.getElementById("iSTRING").value = PLACES5.toString();
+}
+
+</script>
+
+</body>
+
+</html>

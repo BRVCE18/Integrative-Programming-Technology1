@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>  QUICK MAFS  </title>
+
+<style>
+
+body {
+	margin: 0;
+	position: relative;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+}
+
+img {
+	width: 100%;
+	top: 0;
+	position: fixed;
+	z-index: -1;
+}
+
+.body {
+	width: 40%;
+	height: 600px;
+	display: block;
+	margin: 20px auto;
+	color: white;
+	text-align: center;
+}
+
+.input {
+	width: 80%;
+	height: 500px;
+	display: block;
+	margin: 20px auto;
+	color: white;
+	text-align: center;
+}
+
+.x {
+	width: 50px;
+}
+
+input[type="text"] ,input[type="number"]
+{
+    background: transparent;
+    border: 2px solid white;
+	border-radius: 5px;
+	color: white;
+	font-size: 20px;
+}
+
+button {
+	width: 100px;
+	height: 50px;
+	background: transparent;
+	color: white;
+	border: 2px solid white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.compute {
+	width: 100px;
+	height: 40px;
+	background: transparent;
+	color: white;
+	border: 2px solid white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.compute:hover {
+	background: white;
+	color: black;
+}
+
+
+
+</style>
+
+</head>
+
+<!==============================================================================>
+
+<body>
+<form>
+	
+	<img src="math.jpg">
+	
+	<br>
+	
+	<div class="body">
+		<p style="font-size: 30px"> SIMPLE MATH CALCULATOR </p>
+		
+		<div class="input">
+		
+			<br> <br>
+		
+			<label for="X">INTEGER X</label> &nbsp <input type="number" class="x" id="X" name="X"> &nbsp &nbsp &nbsp &nbsp &nbsp
+			<input type="number" class="x" id="Y" name="Y"> &nbsp <label for="Y">INTEGER Y</label>
+			
+			<br> <br> <br> <br>
+			
+			<input type="button" class="compute" value="COMPUTE" onclick="compute()">
+			
+			<br> <br> <br> <br>
+			
+			<label> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp SUM </label>  &nbsp <input type="text" class="x" id="SUM" readonly> &nbsp &nbsp &nbsp &nbsp &nbsp
+			<input type="text" class="x" id="DIFF" readonly> &nbsp <label for="">DIFFERENCE</label> <br> <br>
+			
+			<label>PRODUCT</label> &nbsp <input type="text" class="x" id="PROD"> &nbsp &nbsp &nbsp &nbsp &nbsp
+			<input type="text" class="x" id="QUO" readonly> &nbsp <label>QUOTIENT</label>
+			
+			<br> <br>
+			
+			<label>MODULUS</label> &nbsp <input type="text" class="x" id="MOD"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+			
+			<br> <br> <br> <br> <br>
+			
+			<input type="reset" value="RESET" class="compute">
+			
+		</div>
+	
+	</div>
+	
+</form>
+
+<script>
+
+function compute() {
+	
+var X = document.getElementById("X").value;
+var Y = document.getElementById("Y").value;
+var SUM = +X + +Y;
+var DIFF = +X - +Y;
+var PROD = +X * +Y;
+var QUO = +X / +Y;
+var MOD = +X % +Y;
+
+	document.getElementById("SUM").value = SUM;
+	document.getElementById("DIFF").value = DIFF;
+	document.getElementById("PROD").value = PROD;
+	document.getElementById("QUO").value = QUO;
+	document.getElementById("MOD").value = MOD;
+
+}
+
+</script>
+
+</body>
+
+</html>

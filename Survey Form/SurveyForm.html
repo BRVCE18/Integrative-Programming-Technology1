@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>  TECHX Tech Support  </title>
+
+<style>
+
+body {
+background-color: rgb(242,237,228);
+margin: 0;
+margin-bottom: 200px;
+position: relative;
+font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+}
+
+.top {
+background-color: rgb(244,143,24);
+width: 100%;
+height: 40px;
+position: fixed;
+top: 0;
+}
+
+.doc {
+border: 1px solid gray;
+margin: 0px auto;
+margin-top: 100px;
+padding: 30px 40px;
+width: 380px;
+height: 1200px;
+border-radius: 3.5px;
+}
+
+.title {
+font-size: 23px;
+font-weight: bold;
+margin-bottom: 30px;
+}
+
+.title2 {
+font-weight: bold;
+font-size: 14px;
+margin-bottom: 6px;
+}
+
+.textbox, .textbox2, .textbox3, .textbox4 {
+width: 100%;
+height: 20px;
+border: 1px solid gray;
+border-radius: 2px;
+}
+
+.textbox2 {
+width: 13.5%;
+}
+
+.textbox3 {
+width: 45%;
+}
+
+.textbox4 {
+width: 23%;
+}
+
+.radio{
+cursor: pointer;
+}
+
+.textarea {
+width: 100%;
+height: 110px; ;
+border: 1px solid gray;
+border-radius: 2px;
+font-size: 17px;
+}
+
+.button2, .button3 {
+width: 100px;
+height: 50px;
+margin-top: 115px;
+margin-left: 80px;
+background-color: rgb(81,168,122);
+border: 1px solid rgb(81,168,122);
+border-radius: 4px;
+cursor: pointer;
+text-align: center;
+font-size: 17px;
+font-weight: bold;
+color: white;
+position: absolute;
+}
+
+.button3 {
+margin-left: 200px;
+background-color: rgb(168,81,90);
+border: 1px solid rgb(168,81,90);
+}
+
+.subtitle2 {
+font-size: 11.5px;
+margin-top: 3px;
+margin-bottom: 15px;
+}
+
+img{
+width: 576px;
+margin-top: 10px;
+margin-left: -98px;
+}
+
+.icon{
+margin-left: 0px;
+width: 15px;
+}
+
+label {
+font-size: 12px;
+}
+
+select {
+height: 24.5px;
+margin-right
+}
+
+.end {
+text-align: center;
+font-size: 12px;
+margin: 0px auto;
+margin-top: 100px;
+width: 1000px;
+}
+
+</style>
+
+</head>
+
+<!==============================================================================>
+
+<body>
+
+	<div class="top"> 
+	</div>
+
+	<div class="doc"> 
+		<div class="title">
+			<span style="color:red">A</span><span style="color:blue">B</span><span style="color:green">C</span> Electronics
+			<p style="font-size:14px;margin-top:3px"> Survey Form </p>
+			<p style="font-size:12px;margin-top:3px;font-weight: normal"> If you are interested in purchasing one or more of our products, before ordering please complete some or all of the following survey for our marketing department.  Answering any question is optional, and all information will be kept strictly confidential.  Thank you very much for your time! </p>
+		</div>
+
+		<form>
+			<div class="title2">
+		 		<span> 1. What is your Name? </span>
+			</div>
+			<input class="textbox" type="text">
+			<br>
+			<br>
+			
+			<div class="title2">
+		 		<span> 2. What is your Date of Birth? </span>
+			</div>
+			<label for="month"> Month: </label> 
+				<select name="month">
+				<option>January</option>
+				<option>February</option>
+				<option>March</option>
+				<option>April</option>
+				<option>May</option>
+				<option>June</option>
+				<option>July</option>
+				<option>August</option>
+				<option>September</option>
+				<option>October</option>
+				<option>November</option>
+				<option>December</option>
+			</select> &nbsp
+			<label for="date"> Date: </label> 
+				<select name="date">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+				<option>13</option>
+				<option>14</option>
+				<option>15</option>
+				<option>16</option>
+				<option>17</option>
+				<option>18</option>
+				<option>19</option>
+				<option>20</option>
+				<option>21</option>
+				<option>22</option>
+				<option>23</option>
+				<option>24</option>
+				<option>25</option>
+				<option>26</option>
+				<option>27</option>
+				<option>28</option>
+				<option>29</option>
+				<option>30</option>
+				<option>31</option>
+			</select> &nbsp
+			<label for="month"> Year: </label> 
+			<input class="textbox2" type="text">
+			<br>
+			<br>
+			
+			<div class="title2">
+		 		<span> 3.	What is your mailing address (if you would like to &nbsp &nbsp &nbsp &nbsp have a hard copy of our catalog sent to you)? </span>
+			</div>
+			<textarea class="textarea"></textarea>
+			<br>
+			<br>
+			
+			<div class="title2">
+		 		<span> 4. What is your Email Address? </span>
+			</div>
+			<input class="textbox" type="text">
+			<br>
+			<br>
+			
+			<div class="title2">
+		 		<span> 5. Have you viewed our online product catalog? </span>
+			</div>
+			<input class="radio" type="radio"> <span> Yes </span>
+			<input class="radio" type="radio"> <span> No </span>
+			<br>
+			<br>
+			
+			<div class="title2">
+		 		<span> 6. If so, what product(s), besides the one you are &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ordering, might you be interested in purchasing in &nbsp &nbsp &nbsp the future? (Check all that apply.) </span>
+			</div>
+			<input class="radio" type="checkbox"> <span> VCR </span> <br>
+			<input class="radio" type="checkbox"> <span> Big Screen TV </span> <br>
+			<input class="radio" type="checkbox"> <span> Audio Equipment </span> <br>
+			<input class="radio" type="checkbox"> <span> Video Equipment </span> <br>
+			<input class="radio" type="checkbox"> <span> Camera Equipment </span> <br>
+			<input class="radio" type="checkbox"> <span> Other </span>
+			<input class="textbox3" type="text" placeholder="Please List:">
+			<br>
+			<br>
+			
+			<div class="title2">
+		 		<span> 7. Do you have any questions, comments or &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp suggestions before proceeding to the Order Form? </span>
+			</div>
+			<textarea class="textarea"></textarea>
+			<br>
+			<br>
+			
+			<button class="button2"> Send Form </button>
+			<input type="reset" class="button3" value="Clear Form"> </button>
+
+		</form>
+		
+		<img class="logo" src="letter.png">
+
+	</div>
+
+</body>
+
+<div class="end">
+
+Again, thank you...we appreciate the information.  Please proceed now to the Order Form.
+
+<br> <br>
+
+<b> Note: </b>  The “Send Form” button above, if activated, will send the form data to a nonexistent location.  Also, the “Order Form” hyperlink is not active; it is for demonstration only.
+
+</div>
+
+</html>

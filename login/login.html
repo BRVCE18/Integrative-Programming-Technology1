@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>  LOGIN  </title>
+
+<style>
+
+body {
+	margin: 0;
+	position: relative;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	background-color: black;
+}
+
+img {
+	width: 100%;
+	top: 0;
+	position: fixed;
+	z-index: -1;
+	opacity: 0.5;
+}
+
+.body {
+	width: 40%;
+	height: 600px;
+	display: block;
+	margin: 20px auto;
+	color: white;
+	text-align: center;
+	background: rgba(0,0,0,.8);
+	border-radius: 2%;
+	border: 3px solid red;
+}
+
+.input {
+	width: 80%;
+	height: 500px;
+	display: block;
+	margin: 20px auto;
+	color: white;
+	text-align: center;
+}
+
+.text , .text2{
+	width: 250px;
+	height: 35px;
+	background: transparent;
+	color: white;
+	border: 2px solid white;
+	border-radius: 5px;
+	font-size: 15px;
+	text-align: center;
+}
+
+.text{
+	padding-left: 20px;
+}
+
+.text2{
+	width: 400px;
+	border: none;
+}
+
+button {
+	width: 100px;
+	height: 50px;
+	background: transparent;
+	color: white;
+	border: 2px solid white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.compute, .compute2 {
+	width: 100px;
+	height: 40px;
+	background: transparent;
+	color: white;
+	border: 2px solid white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.compute2 {
+	opacity: 0.3;
+	pointer-events: none;
+}
+
+.compute:hover, .compute2:hover {
+	background: white;
+	color: black;
+}
+
+label {
+	font-size: 20px;
+}
+
+.x {
+	width: 23px;
+	height: 23px;
+	margin-top: 10px;
+	margin-left: -15px;
+}
+
+.hint {
+	font-size: 11px;
+	color: gray;
+}
+
+</style>
+
+</head>
+
+<!==============================================================================>
+
+<body>
+<form id="myform">
+	
+	<img src="login.jpg">
+	
+	<br> 
+	
+	<div class="body">
+	<br>
+		<p style="font-size: 30px"> L O G I N </p>
+		
+		<div class="input">
+		
+			<br> <br>
+		
+			<label for="C">Username :</label> &nbsp <input type="text" class="text" id="iNAME">
+			
+			<br> <br>
+			
+			<label for="S">Password : </label> &nbsp <input type="password" class="text" id="iPASS">
+			
+			<br>
+			
+			<input type="checkbox" class="x" onclick="show()"> Show Password
+			
+			<br> <br> <br> <br>
+			
+			<input type="button" class="compute" value="Sign In" id="iLOG" onclick="login()">
+			
+			<br> <br> <br> <br>
+			
+			<input type="text" class="text2" id="iWRONG" readonly>
+			
+			<input type="text" class="text2" id="iATT" readonly>
+			
+			<br> <br> <br>
+			
+			<span class="hint" > Username: BRUCE18 </span> &nbsp
+			<span class="hint" > Password: IT </span>
+			
+			
+		</div>
+		
+	</div>
+	
+	
+</form>
+
+<script>
+
+	var X = 3;
+	
+	function login() {
+	
+		var uNAME = document.getElementById("iNAME").value;
+		var uPASS = document.getElementById("iPASS").value;
+		var NAME = "BRUCE18";
+		var PASS = "IT";
+		
+		if (uNAME == NAME && uPASS == PASS) {
+		
+			document.getElementById("iLOG").disable = true;
+			document.getElementById("iLOG").style.pointerEvents = "none";
+			document.getElementById("iLOG").style.opacity = "0.5";
+			alert("LOGGING IN...");
+		
+			window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+			//RickRolled HEHE
+		
+		}
+		
+		else if (uNAME == "" || uPASS == "") {
+		
+			document.getElementById("iWRONG").value = "Please input a USERNAME and/or PASSWORD";
+			document.getElementById("iWRONG").style.color = "blue";
+			
+		}
+		
+		else if (uNAME != NAME || uPASS != PASS) {
+			
+			X = X - 1;
+			
+			document.getElementById("iWRONG").value = "Invalid USERNAME or PASSWORD!";
+			document.getElementById("iWRONG").style.color = "red";
+			document.getElementById("iATT").value = "Remaining Attempts: " + X;
+			alert("Incorrect USERNAME or PASSWORD!");
+		
+		}
+		
+		if (X == 0) {
+		
+			document.getElementById("iATT").value = "";
+			document.getElementById("iLOG").disable = true;
+			document.getElementById("iLOG").style.pointerEvents = "none";
+			document.getElementById("iLOG").style.opacity = "0.5";
+		
+			setInterval(function(){ 
+
+				document.getElementById("iWRONG").value = "No attempts left. Please try again later.";
+				document.getElementById("iWRONG").style.color = "red";
+
+			}, 500);
+			
+			setInterval(function(){ 
+
+				document.getElementById("iWRONG").value = "No attempts left. Please try again later.";
+				document.getElementById("iWRONG").style.color = "orange";
+
+			}, 1000);
+			
+		}
+		
+	}
+	
+	function show() {
+	
+		var sPASS = document.getElementById("iPASS");
+		
+
+		if (sPASS.type === "password") {
+			sPASS.type = "text";
+		}
+		
+		else {
+		sPASS.type = "password";
+		}
+		
+	}
+
+
+</script>
+
+</body>
+
+</html>

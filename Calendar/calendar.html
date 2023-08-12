@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>  2021 Calendar  </title>
+
+<style>
+
+body {
+	background-color: rgb(4, 39, 66);
+	margin: 0;
+	position: relative;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+}
+
+.border {
+	width: 97%;
+	height: 640px;
+	position: fixed;
+	left: 20px;
+	top: 10px;
+	z-index: 2;
+	filter: drop-shadow(0px 0px 4px black);
+}
+
+.sun{
+	position: fixed;
+	opacity: 0.4;
+	top: 50px;
+	z-index: -1;
+	left: -120px;
+	width: 100px;
+	height: 100px;
+	background-image: linear-gradient(orange, red);
+	border: 1px solid red;
+	border-radius: 50%;
+	box-shadow: 0px 0px 10px 10px red;
+	animation-name: sun;
+	animation-duration: 20s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes sun {
+	0% {left: -120px;}
+	43% {box-shadow: 0px 0px 10px 10px red;}
+	48% {box-shadow: 0px 0px 10px 15px orangered;}
+	53% {box-shadow: 0px 0px 10px 10px red;}
+	100% {left: 1400px;}
+}
+
+.clouds {
+	height: 18%;
+	position: fixed;
+	bottom: 0;
+	z-index: 1;
+	animation-name: cloud;
+	animation-duration: 70s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes cloud {
+	from {left: 0px;}
+	to {left: -2300px;}
+}
+
+.mountains {
+	height: 30%;
+	position: fixed;
+	bottom: 0;
+	margin-bottom: -15px;
+	z-index: -3;
+	animation-name: mountain;
+	animation-duration: 150s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes mountain {
+	from {left: 0px;}
+	to {left: -3000px;}
+}
+
+.top {
+	margin-top: -182px;
+	height: 180px;
+}
+
+.ph {
+	z-index: -5;
+	height: 45px;
+	top: 4%;
+	left: 12%;
+	position: absolute;
+	filter: drop-shadow(0px 0px 5px black);
+}
+
+.cal {
+	z-index: -5;
+	top: 4%;
+	left: 61.5%;
+	position: absolute;
+	height: 50px;
+	filter: drop-shadow(0px 0px 5px black);
+}
+
+.logo {
+	margin-top: 30px;
+	height: 180px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	filter: drop-shadow(0px 0px 10px black);
+	z-index: 3;
+	top: 0;
+	position: sticky;
+}
+
+.body {
+	width: 70%;
+	height: 1790px;
+	margin: 20px auto;
+}
+
+.row {
+	width: 100%;
+	height: 260px;
+	margin: 10px 0px;
+}
+
+.monthbox{
+	float: left;
+	background-color: rgb(252, 249, 199);
+	border: 3px solid red;
+	border-radius: 2%;
+	margin: 10px 10px;
+	width: 30.5%;
+	height: 100%;
+	text-align: center;
+}
+
+.last {
+	margin: 200px 10px;
+	height: 500px;
+	width: 97%;
+	text-align: center;
+	color: white;
+}
+
+.box {
+	border: 1px solid red;
+}
+
+.holidaybox{
+	float: left;
+	margin: 10px 9.5px;
+	width: 29.5%;
+	height: 75%;
+	padding-left: 1.5%;
+	text-align: left;
+	font-size: 13px;
+}
+
+table, th, td {
+	width: 100%;
+}
+
+th, td {
+	width: 12%;
+	height: 20px;
+}
+
+th {
+	font-size: 11px;
+	background-color: rgb(255, 194, 161);
+}
+
+.old {
+color: lightgray;
+}
+
+.monthname{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.weeks{
+	font-weight: bold;
+	color: blue;
+}
+
+.holiday {
+	color: red;
+}
+
+</style>
+
+</head>
+
+<!==============================================================================>
+
+<body>
+	
+	<div class="sun"></div>
+	<img class="border" src="border.png">
+	<img class="clouds" src="clouds.png">
+	<img class="mountains" src="mountains.png">
+	
+	<img class="logo" id="logo" src="logo.png">
+	
+	<Div class="top">
+		<img class="ph" src="ph.png">
+		<img class="cal" src="2021.png">
+	</div>
+	
+	<div class="body">
+	
+	<div class="row">
+		<div class="monthbox">
+			<br> <span class="monthname"> JANUARY </span> <br> <br>
+			<table>
+				<tr>
+					<th>W#</th>
+					<th>S</th>
+					<th>M</th>
+					<th>T</th>
+					<th>W</th>
+					<th>T</th>
+					<th>F</th>
+					<th>S</th>
+				</tr>
+				<tr>
+					<td class="weeks">1</td>
+					<td class="old">27</td>
+					<td class="old">28</td>
+					<td class="old">29</td>
+					<td class="old">30</td>
+					<td class="old">31</td>
+					<td class="holiday">1</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td class="weeks">2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+				</tr>
+				<tr>
+					<td class="weeks">3</td>
+					<td>10</td>
+					<td>11</td>
+					<td>12</td>
+					<td>13</td>
+					<td>14</td>
+					<td>15</td>
+					<td>16</td>
+				</tr>
+				<tr>
+					<td class="weeks">4</td>
+					<td>17</td>
+					<td>18</td>
+					<td>19</td>
+					<td>20</td>
+					<td>21</td>
+					<td>22</td>
+					<td class="holiday">23</td>
+				</tr>
+				<tr>
+					<td class="weeks">5</td>
+					<td>24</td>
+					<td>25</td>
+					<td>26</td>
+					<td>27</td>
+					<td>28</td>
+					<td>29</td>
+					<td>30</td>
+				</tr>
+				<tr>
+					<td class="weeks">6</td>
+					<td>31</td>
+					<td class="old">1</td>
+					<td class="old">2</td>
+					<td class="old">3</td>
+					<td class="old">4</td>
+					<td class="old">5</td>
+					<td class="old">6</td>				
+				</tr>
+			</table>
+		</div>
+		<div class="monthbox">
+			<br> <span class="monthname"> FEBRUARY </span> <br> <br>
+			<table>
+				<tr>
+					<th>W#</th>
+					<th>S</th>
+					<th>M</th>
+					<th>T</th>
+					<th>W</th>
+					<th>T</th>
+					<th>F</th>
+					<th>S</th>
+				</tr>
+				<tr>
+					<td class="weeks">6</td>
+					<td class="old">31</td>
+					<td>1</td>
+					<td class="holiday">2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>		
+				</tr>
+				<tr>
+					<td class="weeks">7</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>10</td>
+					<td>11</td>
+					<td class="holiday">12</td>
+					<td>13</td>
+				</tr>
+				<tr>
+					<td class="weeks">8</td>
+					<td>14</td>
+					<td>15</td>
+					<td>16</td>
+					<td>17</td>
+					<td>18</td>
+					<td>19</td>
+					<td>20</td>
+				</tr>
+				<tr>
+					<td class="weeks">9</td>
+					<td>21</td>
+					<td>22</td>
+					<td>23</td>
+					<td>24</td>
+					<td class="holiday">25</td>
+					<td class="holiday">26</td>
+					<td>27</td>
+				</tr>
+				<tr>
+					<td class="weeks">10</td>
+					<td>28</td>
+					<td class="old">1</td>
+					<td class="old">2</td>
+					<td class="old">3</td>
+					<td class="old">4</td>
+					<td class="old">5</td>
+					<td class="old">6</td>
+				</tr>
+			</table>
+		</div>
+		<div class="monthbox">
+			<br> <span class="monthname"> MARCH </span> <br> <br>
+			<table>
+				<tr>
+					<th>W#</th>
+					<th>S</th>
+					<th>M</th>
+					<th>T</th>
+					<th>W</th>
+					<th>T</th>
+					<th>F</th>
+					<th>S</th>
+				</tr>
+				<tr>
+					<td class="weeks">10</td>
+					<td class="old">28</td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>		
+				</tr>
+				<tr>
+					<td class="weeks">11</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>10</td>
+					<td>11</td>
+					<td>12</td>
+					<td>13</td>
+				</tr>
+				<tr>
+					<td class="weeks">12</td>
+					<td>14</td>
+					<td>15</td>
+					<td>16</td>
+					<td>17</td>
+					<td>18</td>
+					<td>19</td>
+					<td>20</td>
+				</tr>
+				<tr>
+					<td class="weeks">13</td>
+					<td>21</td>
+					<td>22</td>
+					<td>23</td>
+					<td>24</td>
+					<td>25</td>
+					<td>26</td>
+					<td>27</td>
+				</tr>
+				<tr>
+					<td class="weeks">14</td>
+					<td>28</td>
+					<td>29</td>
+					<td>30</td>
+					<td>31</td>
+					<td class="old">1</td>
+					<td class="old">2</td>
+					<td class="old">3</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="monthbox">
+			<br> <span class="monthname"> APRIL </span> <br> <br>
+			<table>
+				<tr>
+					<th>W#</th>
+					<th>S</th>
+					<th>M</th>
+					<th>T</th>
+					<th>W</th>
+					<th>T</th>
+					<th>F</th>
+					<th>S</th>
+				</tr>
+				<tr>
+					<td class="weeks">14</td>
+					<td class="old">28</td>
+					<td class="old">29</td>
+					<td class="old">30</td>
+					<td class="old">31</td>
+					<td class="holiday">1</td>
+					<td class="holiday">2</td>
+					<td class="holiday">3</td>
+				</tr>
+				<tr>
+					<td class="weeks">15</td>
+					<td class="holiday">4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td class="holiday">9</td>
+					<td>10</td>
+				</tr>
+				<tr>
+					<td class="weeks">16</td>
+					<td>11</td>
+					<td>12</td>
+					<td>13</td>
+					<td>14</td>
+					<td>15</td>
+					<td>16</td>
+					<td>17</td>
+				</tr>
+				<tr>
+					<td class="weeks">17</td>
+					<td>18</td>
+					<td>19</td>
+					<td>20</td>
+					<td>21</td>
+					<td>22</td>
+					<td>23</td>
+					<td>24</td>
+				</tr>
+				<tr>
+					<td class="weeks">18</td>
+					<td>25</td>
+					<td>26</td>
+					<td class="holiday">27</td>
+					<td>28</td>
+					<td>29</td>
+					<td>30</td>
+					<td class="old">1</td>
+				</tr>
+			</table>
+		</div>
+		<div class="monthbox">
+			<br> <span class="monthname"> MAY </span> <br> <br>
+			<table>
+				<tr>
+					<th>W#</th>
+					<th>S</th>
+					<th>M</th>
+					<th>T</th>
+					<th>W</th>
+					<th>T</th>
+					<th>F</th>
+					<th>S</th>
+				</tr>
+				<tr>
+					<td class="weeks">18</td>
+					<td class="old">25</td>
+					<td class="old">26</td>
+					<td class="old">27</td>
+					<td class="old">28</td>
+					<td class="old">29</td>
+					<td class="old">30</td>
+					<td class="holiday">1</td>
+				</tr>
+				<tr>
+					<td class="weeks">19</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+				</tr>
+				<tr>
+					<td class="weeks">20</td>
+					<td>9</td>
+					<td>10</td>
+					<td>11</td>
+					<td>12</td>
+					<td class="holiday">13</td>
+					<td>14</td>
+					<td>15</td>
+				</tr>
+				<tr>
+					<td class="weeks">21</td>
+					<td>16</td>
+					<td>17</td>
+					<td>18</td>
+					<td>19</td>
+					<td>20</td>
+					<td>21</td>
+					<td>22</td>
+				</tr>
+				<tr>
+					<td class="weeks">22</td>
+					<td>23</td>
+					<td>24</td>
+					<td>25</td>
+					<td>26</td>
+					<td>27</td>
+					<td>28</td>
+					<td>29</td>
+				</tr>
+				<tr>
+					<td class="weeks">23</td>
+					<td>30</td>
+					<td>31</td>
+					<td class="old">1</td>
+					<td class="old">2</td>
+					<td class="old">3</td>
+					<td class="old">4</td>
+					<td class="old">5</td>		
+				</tr>
+			</table>
+		</div>
+		<div class="monthbox">
+			<br> <span class="monthname"> JUNE </span> <br> <br>
+			<table>
+				<tr>
+					<th>W#</th>
+					<th>S</th>
+					<th>M</th>
+					<th>T</th>
+					<th>W</th>
+					<th>T</th>
+					<th>F</th>
+					<th>S</th>
+				</tr>
+				<tr>
+					<td class="weeks">23</td>
+					<td class="old">30</td>
+					<td class="old">31</td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>		
+				</tr>
+				<tr>
+					<td class="weeks">24</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>10</td>
+					<td>11</td>
+					<td class="holiday">12</td>
+				</tr>
+				<tr>
+					<td class="weeks">25</td>
+					<td>13</td>
+					<td>14</td>
+					<td>15</td>
+					<td>16</td>
+					<td>17</td>
+					<td>18</td>
+					<td class="holiday">19</td>
+				</tr>
+				<tr>
+					<td class="weeks">26</td>
+					<td>20</td>
+					<td>21</td>
+					<td>22</td>
+					<td>23</td>
+					<td>24</td>
+					<td>25</td>
+					<td>26</td>
+				</tr>
+				<tr>
+					<td class="weeks">27</td>
+					<td>27</td>
+					<td>28</td>
+					<td>29</td>
+					<td>30</td>
+					<td class="old">1</td>
+					<td class="old">2</td>
+					<td class="old">3</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="monthbox">
+			<br> <span class="monthname"> JULY </span> <br> <br>
+			<table>
+				<tr>
+					<th>W#</th>
+					<th>S</th>
+					<th>M</th>
+					<th>T</th>
+					<th>W</th>
+					<th>T</th>
+					<th>F</th>
+					<th>S</th>
+				</tr>
+				<tr>
+					<td class="weeks">27</td>
+					<td class="old">27</td>
+					<td class="old">28</td>
+					<td class="old">29</td>
+					<td class="old">30</td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td class="weeks">28</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>10</td>
+				</tr>
+				<tr>
+					<td class="weeks">29</td>
+					<td>11</td>
+					<td>12</td>
+					<td>13</td>
+					<td>14</td>
+					<td>15</td>
+					<td>16</td>
+					<td>17</td>
+				</tr>
+				<tr>
+					<td class="weeks">30</td>
+					<td>18</td>
+					<td>19</td>
+					<td class="holiday">20</td>
+					<td>21</td>
+					<td>22</td>
+					<td>23</td>
+					<td>24</td>
+				</tr>
+				<tr>
+					<td class="weeks">31</td>
+					<td>25</td>
+					<td>26</td>
+					<td class="holiday">27</td>
+					<td>28</td>
+					<td>29</td>
+					<td>30</td>
+					<td>31</td>
+				</tr>
+			</table>
+		</div>
+		<div class="monthbox">
+			<br> <span class="monthname"> AUGUST </span> <br> <br>
+			<table>
+				<tr>
+					<th>W#</th>
+					<th>S</th>
+					<th>M</th>
+					<th>T</th>
+					<th>W</th>
+					<th>T</th>
+					<th>F</th>
+					<th>S</th>
+				</tr>
+				<tr>
+					<td class="weeks">32</td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>					
+				</tr>
+				<tr>
+					<td class="weeks">33</td>
+					<td>8</td>
+					<td class="holiday">9</td>
+					<td>10</td>
+					<td>11</td>
+					<td>12</td>
+					<td>13</td>
+					<td>14</td>
+				</tr>
+				<tr>
+					<td class="weeks">34</td>
+					<td>15</td>
+					<td>16</td>
+					<td>17</td>
+					<td>18</td>
+					<td>19</td>
+					<td>20</td>
+					<td class="holiday">21</td>
+				</tr>
+				<tr>
+					<td class="weeks">35</td>
+					<td>22</td>
+					<td>23</td>
+					<td>24</td>
+					<td>25</td>
+					<td>26</td>
+					<td>27</td>
+					<td>28</td>
+				</tr>
+				<tr>
+					<td class="weeks">36</td>
+					<td>29</td>
+					<td class="holiday">30</td>
+					<td>31</td>
+					<td class="old">1</td>
+					<td class="old">2</td>
+					<td class="old">3</td>
+					<td class="old">4</td>
+				</tr>
+			</table>
+		</div>
+		<div class="monthbox">
+			<br> <span class="monthname"> SEPTEMBER </span> <br> <br>
+			<table>
+				<tr>
+					<th>W#</th>
+					<th>S</th>
+					<th>M</th>
+					<th>T</th>
+					<th>W</th>
+					<th>T</th>
+					<th>F</th>
+					<th>S</th>
+				</tr>
+				<tr>
+					<td class="weeks">36</td>
+					<td class="old">29</td>
+					<td class="old">30</td>
+					<td class="old">31</td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>	
+				</tr>
+				<tr>
+					<td class="weeks">37</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>10</td>
+					<td>11</td>
+				</tr>
+				<tr>
+					<td class="weeks">38</td>
+					<td>12</td>
+					<td>13</td>
+					<td>14</td>
+					<td>15</td>
+					<td>16</td>
+					<td>17</td>
+					<td>18</td>
+				</tr>
+				<tr>
+					<td class="weeks">39</td>
+					<td>19</td>
+					<td>20</td>
+					<td class="holiday">21</td>
+					<td>22</td>
+					<td>23</td>
+					<td>24</td>
+					<td>25</td>
+				</tr>
+				<tr>
+					<td class="weeks">40</td>
+					<td>26</td>
+					<td>27</td>
+					<td>28</td>
+					<td>29</td>
+					<td>30</td>
+					<td class="old">1</td>
+					<td class="old">2</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="monthbox">
+			<br> <span class="monthname"> OCTOBER </span> <br> <br>
+			<table>
+				<tr>
+					<th>W#</th>
+					<th>S</th>
+					<th>M</th>
+					<th>T</th>
+					<th>W</th>
+					<th>T</th>
+					<th>F</th>
+					<th>S</th>
+				</tr>
+				<tr>
+					<td class="weeks">40</td>
+					<td class="old">27</td>
+					<td class="old">28</td>
+					<td class="old">29</td>
+					<td class="old">30</td>
+					<td class="old">31</td>
+					<td>1</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td class="weeks">41</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+				</tr>
+				<tr>
+					<td class="weeks">42</td>
+					<td>10</td>
+					<td>11</td>
+					<td>12</td>
+					<td>13</td>
+					<td>14</td>
+					<td>15</td>
+					<td>16</td>
+				</tr>
+				<tr>
+					<td class="weeks">43</td>
+					<td>17</td>
+					<td class="holiday">18</td>
+					<td>19</td>
+					<td>20</td>
+					<td>21</td>
+					<td>22</td>
+					<td>23</td>
+				</tr>
+				<tr>
+					<td class="weeks">44</td>
+					<td>24</td>
+					<td>25</td>
+					<td>26</td>
+					<td>27</td>
+					<td>28</td>
+					<td>29</td>
+					<td>30</td>
+				</tr>
+				<tr>
+					<td class="weeks">45</td>
+					<td>31</td>
+					<td class="old">1</td>
+					<td class="old">2</td>
+					<td class="old">3</td>
+					<td class="old">4</td>
+					<td class="old">5</td>
+					<td class="old">6</td>				
+				</tr>
+			</table>
+		</div>
+		<div class="monthbox">
+			<br> <span class="monthname"> NOVEMBER </span> <br> <br>
+			<table>
+				<tr>
+					<th>W#</th>
+					<th>S</th>
+					<th>M</th>
+					<th>T</th>
+					<th>W</th>
+					<th>T</th>
+					<th>F</th>
+					<th>S</th>
+				</tr>
+				<tr>
+					<td class="weeks">46</td>
+					<td class="old">31</td>
+					<td class="holiday">1</td>
+					<td class="holiday">2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>		
+				</tr>
+				<tr>
+					<td class="weeks">47</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>10</td>
+					<td>11</td>
+					<td>12</td>
+					<td>13</td>
+				</tr>
+				<tr>
+					<td class="weeks">48</td>
+					<td>14</td>
+					<td>15</td>
+					<td>16</td>
+					<td>17</td>
+					<td>18</td>
+					<td>19</td>
+					<td>20</td>
+				</tr>
+				<tr>
+					<td class="weeks">49</td>
+					<td>21</td>
+					<td>22</td>
+					<td>23</td>
+					<td>24</td>
+					<td>25</td>
+					<td>26</td>
+					<td>27</td>
+				</tr>
+				<tr>
+					<td class="weeks">50</td>
+					<td>28</td>
+					<td>29</td>
+					<td class="holiday">30</td>
+					<td class="old">1</td>
+					<td class="old">2</td>
+					<td class="old">3</td>
+					<td class="old">4</td>
+				</tr>
+			</table>
+		</div>
+		<div class="monthbox">
+			<br> <span class="monthname"> DECEMBER </span> <br> <br>
+			<table>
+				<tr>
+					<th>W#</th>
+					<th>S</th>
+					<th>M</th>
+					<th>T</th>
+					<th>W</th>
+					<th>T</th>
+					<th>F</th>
+					<th>S</th>
+				</tr>
+				<tr>
+					<td class="weeks">50</td>
+					<td class="old">28</td>
+					<td class="old">29</td>
+					<td class="old">30</td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>	
+				</tr>
+				<tr>
+					<td class="weeks">51</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td class="holiday">8</td>
+					<td>9</td>
+					<td>10</td>
+					<td>11</td>
+				</tr>
+				<tr>
+					<td class="weeks">52</td>
+					<td>12</td>
+					<td>13</td>
+					<td>14</td>
+					<td>15</td>
+					<td>16</td>
+					<td>17</td>
+					<td>18</td>
+				</tr>
+				<tr>
+					<td class="weeks">53</td>
+					<td>19</td>
+					<td>20</td>
+					<td>21</td>
+					<td>22</td>
+					<td>23</td>
+					<td class="holiday">24</td>
+					<td class="holiday">25</td>
+				</tr>
+				<tr>
+					<td class="weeks">54</td>
+					<td>26</td>
+					<td>27</td>
+					<td>28</td>
+					<td>29</td>
+					<td class="holiday">30</td>
+					<td class="holiday">31</td>
+					<td class="old">1</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div class="last">
+		 <span class="monthname"> Philippine Holidays 2021 </span> <br> <br>
+		
+			<div class="box">
+				<div class="holidaybox"> <br> <br>
+					&nbsp Jan 1, 2021 - New Year's Day <br> <br>
+					Jan 23, 2021 - First Philippine Republic Day <br> <br>
+					&nbsp Feb 2, 2021 - Constitution Day <br> <br>
+					Feb 12, 2021 - Chinese New Year <br> <br>
+					Feb 25, 2021 - EDSA Revolution Anniversary <br> <br>
+					Feb 26, 2021 - Lantern Festival <br> <br>
+					&nbsp Apr 1, 2021 - Maundy Thursday <br> <br>
+					&nbsp Apr 2, 2021 - Good Friday <br> <br>
+					&nbsp Apr 3, 2021 - Easter Saturday <br> <br>
+					&nbsp Apr 4, 2021 - Easter Sunday
+				</div>
+				<div class="holidaybox"> <br> <br>
+					&nbsp Apr 9, 2021 - Day of Valor <br> <br>
+					Apr 27, 2021 - Lapu-Lapu Day <br> <br>
+					May 13, 2021 - End of Ramadan (Eid al-Fitr) <br> <br>
+					Jun 12, 2021 - Independence Day <br> <br>
+					Jun 19, 2021 - José Rizal's birthday <br> <br>
+					Jul 20, 2021 - <span style="font-size:11px"> Feast of the Sacrifice (Eid al-Adha) </span> <br> <br>
+					Jul 27, 2021 - Iglesia ni Cristo Day <br> <br>
+					&nbsp Aug 9, 2021 - Islamic New Year <br> <br>
+					Aug 21, 2021 - Ninoy Aquino Day <br> <br>
+					Aug 30, 2021 - National Heroes' Day <br> <br>
+				</div>
+				<div class="holidaybox"> <br> <br>
+					Sep 21, 2021 - Mid-Autumn Festival <br> <br>
+					Oct 18, 2021 - <span style="font-size:12px"> Birthday of Muhammad (Mawlid) </span> <br> <br>
+					&nbsp Nov 1, 2021 - All Saints' Day <br> <br>
+					&nbsp Nov 2, 2021 - All Souls' Day <br> <br>
+					Nov 30, 2021 - Bonifacio Day <br> <br>
+					&nbsp Dec 8, 2021 - <span style="font-size:11px"> Feast of the... Blessed Virgin Mary </span> <br> <br>
+					Dec 24, 2021 - Christmas Eve <br> <br>
+					Dec 25, 2021 - Christmas Day <br> <br>
+					Dec 30, 2021 - Rizal Day <br> <br>
+					Dec 31, 2021 - New Year's Eve <br> <br>
+				</div>
+			</div>
+	</div>
+	
+	</div>
+<script>
+
+window.onscroll = function() {scrollFunction(),scroll()};
+
+function scrollFunction() {
+	
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("logo").style.height = "100px";
+  } else {
+    document.getElementById("logo").style.height = "180px";
+  }
+}
+</script>
+
+</body>
+
+</html>

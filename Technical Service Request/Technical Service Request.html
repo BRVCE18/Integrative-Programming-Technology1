@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>  TECHX Tech Support  </title>
+
+<style>
+
+body {
+background-color: rgb(242,237,228);
+margin: 0;
+margin-bottom: 200px;
+position: relative;
+font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+}
+
+.top {
+background-color: rgb(244,143,24);
+width: 100%;
+height: 40px;
+position: fixed;
+top: 0;
+}
+
+.doc {
+border: 1px solid gray;
+margin: 0px auto;
+margin-top: 100px;
+padding: 30px 40px;
+width: 380px;
+height: 1700px;
+border-radius: 3.5px;
+}
+
+.title {
+font-size: 23px;
+font-weight: bold;
+margin-bottom: 30px;
+}
+
+.title2 {
+font-weight: bold;
+font-size: 14px;
+margin-bottom: 6px;
+}
+
+.textbox, .textbox2, .textbox3, .textbox4 {
+width: 100%;
+height: 20px;
+background-color: rgb(242,237,228);
+border: 1px solid gray;
+border-radius: 2px;
+}
+
+.textbox2 {
+width: 13.5%;
+}
+
+.textbox3 {
+width: 45%;
+}
+
+.textbox4 {
+width: 23%;
+}
+
+.radio{
+cursor: pointer;
+}
+
+.button {
+width: 22%;
+height: 20px;
+background-color: rgb(239,239,239);
+border: 1px solid gray;
+border-radius: 2px;
+cursor: pointer;
+text-align: center;
+font-size: 12px;
+color: gray;
+}
+
+.textarea {
+width: 100%;
+height: 110px; ;
+background-color: rgb(242,237,228);
+border: 1px solid gray;
+border-radius: 2px;
+font-size: 17px;
+}
+
+.button2 {
+width: 100px;
+height: 50px;
+margin-top: 115px;
+margin-left: 140px;
+background-color: rgb(58,127,162);
+border: 1px solid rgb(58,127,162);
+border-radius: 4px;
+cursor: pointer;
+text-align: center;
+font-size: 17px;
+font-weight: bold;
+color: white;
+position: absolute;
+}
+
+.subtitle {
+font-size: 11.5px;
+margin: 3px 0px;
+}
+
+.subtitle2 {
+font-size: 11.5px;
+margin-top: 3px;
+margin-bottom: 15px;
+}
+
+img{
+width: 576px;
+margin-top: 10px;
+margin-left: -98px;
+}
+
+.icon{
+margin-left: 0px;
+width: 15px;
+}
+
+</style>
+
+</head>
+
+<!==============================================================================>
+
+<body>
+
+	<div class="top"> 
+	</div>
+
+	<div class="doc"> 
+		<div class="title">
+			Service Request Form
+			<br><p style="font-size:14px;margin-top:3px"> Khorah Technical Vibrations </p>
+		</div>
+
+		<form>
+			<div class="title2">
+		 		<span> Full Name &nbsp </span> <span style="color:red"> * </span>
+			</div>
+			<input class="textbox" type="text">
+			<div class="subtitle">
+				<span> First Name </span>
+			</div>
+			<input class="textbox" type="text">
+			<div class="subtitle">
+				<span> Last Name </span>
+			</div> <br>
+			
+			<div class="title2">
+		 		<span> E-mail &nbsp </span> <span style="color:red"> * </span>
+			</div>
+			<input class="textbox" type="text" placeholder="ex: myname@example.com">
+			<div class="subtitle">
+				<span> example@example.com </span>
+			</div> <br>
+
+			<div class="title2">
+		 		<span> Address </span>
+			</div>
+			<input class="textbox" type="text">
+			<div class="subtitle2">
+				<span> Street Address </span>
+			</div>
+			<input class="textbox" type="text">
+			<div class="subtitle2">
+				<span> Street Address Line 2 </span>
+			</div>
+			<input class="textbox" type="text">
+			<div class="subtitle2">
+				<span> City </span>
+			</div>
+			<input class="textbox" type="text">
+			<div class="subtitle2">
+				<span> State / Province </span>
+			</div>
+			<input class="textbox" type="text">
+			<div class="subtitle2">
+				<span> Postal / Zip COde </span>
+			</div>
+			<input class="textbox" type="text">
+			<div class="subtitle2">
+				<span> Country </span>
+			</div> <br>
+			
+			<div class="title2">
+		 		<span> Phone Number &nbsp </span> <span style="color:red"> * </span>
+			</div>
+			<input class="textbox2" type="text"> <input class="textbox3" type="text">
+			<div class="subtitle">
+				<span> Area Code Phone Number </span>
+			</div> <br>
+
+			<div class="title2">
+		 		<span> Problem Category &nbsp </span> <span style="color:red"> * </span>
+			</div>
+			<input class="textbox" type="text">
+
+			<br> <br> <br>
+
+			<div class="title2">
+		 		<span> Date Issue Began </span>
+			</div>
+			<input class="textbox4" type="text"> <input class="textbox4" type="text"> <input class="textbox4" type="text"> <img class="icon" class="logo" src="icon.png">
+			<div class="subtitle">
+				<span>  Month &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+					Day   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Year </span>
+			</div> <br>
+
+			<div class="title2">
+		 		<span> Is The issue Preventing You From Doing Anything? </span>
+			</div>
+			<input class="radio" type="radio"> <span> Yes </span> <br>
+			<input class="radio" type="radio"> <span> No </span> <br> <br>
+	
+			<div class="title2">
+		 		<span> Type of Connection &nbsp </span> <span style="color:red"> * </span>
+			</div>
+			<input class="radio" type="radio"> <span> Hard-Wired </span> <br>
+			<input class="radio" type="radio"> <span> Wireless </span> <br> <br>
+
+			<div class="title2">
+		 		<span> Operating System </span>
+			</div>
+			<input class="radio" type="radio"> <span> Windows 7 </span> <br>
+			<input class="radio" type="radio"> <span> Windows 8 </span> <br>
+			<input class="radio" type="radio"> <span> Windows XP </span> <br>
+			<input class="radio" type="radio"> <span> Windows Vista </span> <br>
+			<input class="radio" type="radio"> <span> Windows Apple </span> <br>
+			<input class="radio" type="radio"> <span> Wireless </span> <br> <br>
+
+			<div class="title2">
+		 		<span> Upload Image </span>
+			</div>
+			<button class="button"> Choose File </button> <span style="font-size:11.5px"> No File chosen </span> <br> <br>
+
+			<div class="title2">
+		 		<span> Please explain the issue you're experiencing <br> (with as much detail as possible): &nbsp </span> <span style="color:red"> * </span>
+			</div>
+			<textarea class="textarea" placeholder="Type here"></textarea>
+
+			<button class="button2"> Submit </button>
+
+		</form>
+		
+		<img class="logo" src="letter.png">
+
+	</div>
+
+</body>
+
+</html>
